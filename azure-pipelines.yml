@@ -10,9 +10,10 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-- task: AzureKeyVault@1
-  inputs:
-    azureSubscription: 'Adam the Automator(1427e7fb-a488-4ec5-be44-30ac10ca2e95)'
-    KeyVaultName: 'TestingKv1'
-    SecretsFilter: 'VMPassword'
-- script: 'echo $(VMPassword)'
+steps:
+  - task: AzureKeyVault@1
+    inputs:
+      azureSubscription: 'Adam the Automator(1427e7fb-a488-4ec5-be44-30ac10ca2e95)'
+      KeyVaultName: 'TestingKv1'
+      SecretsFilter: '*'
+  - script: 'echo $(VMPassword)'
