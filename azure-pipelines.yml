@@ -14,3 +14,14 @@ jobs:
           script: 'Write-Host "This is me running PowerShell code!"' ## Windows PowerShell by default
       - powershell: 'Write-Host "This is me running PowerShell code!"' ## Windows PowerShell
       - pwsh: 'Write-Host "This is me running PowerShell code!"' ## PowerShell Core
+  - job: Running_on_Linux
+    pool:
+      vmImage: "ubuntu-latest"
+    steps:
+      - checkout: none
+      - task: PowerShell@2
+        inputs:
+          targetType: 'inline'
+          script: 'Write-Host "This is me running PowerShell code!"' ## PowerShell (Core) now since on Linux
+      - powershell: 'Write-Host "This is me running PowerShell code!"' ## Windows PowerShell
+      - pwsh: 'Write-Host "This is me running PowerShell code!"' ## PowerShell Core
