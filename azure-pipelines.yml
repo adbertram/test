@@ -1,0 +1,13 @@
+variables:
+  - name: project_name
+    value: "vmsscicd"
+
+jobs:
+  - job: Windows
+    pool:
+      vmImage: "windows-latest"
+    steps:
+      - task: PowerShell@2
+        inputs:
+          targetType: 'inline'
+          script: "This is me running PowerShell code!"
