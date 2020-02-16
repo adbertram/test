@@ -3,7 +3,7 @@ variables:
     value: "vmsscicd"
 
 jobs:
-  - job: "Running on Windows"
+  - job: Running_on_Windows
     pool:
       vmImage: "windows-latest"
     steps:
