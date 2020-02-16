@@ -11,4 +11,4 @@ jobs:
       - task: PowerShell@2
         inputs:
           targetType: 'inline'
-          script: "This is me running PowerShell code!"
+          script: '"This is me running PowerShell code!"'
