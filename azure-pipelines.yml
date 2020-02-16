@@ -34,3 +34,4 @@ steps:
     inputs:
       targetType: 'inline'
       script: 'Write-Host "This is me running PowerShell code!"'
+      pwsh: true
