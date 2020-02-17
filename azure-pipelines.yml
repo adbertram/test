@@ -1,6 +1,6 @@
-# variables:
-#   - name: project_name
-#     value: "vmsscicd"
+variables:
+  - name: system.debug
+    value: true
 
 # jobs:
 #   - job: Running_on_Windows
