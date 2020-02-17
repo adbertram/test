@@ -32,6 +32,7 @@ steps:
       targetType: 'inline'
       script: 'Write-Host "This is me running PowerShell code!"'
       pwsh: true
+  - powershell: "Get-ChildItem '$(System.DefaultWorkingDirectory)'"
   - task: PowerShell@2
     inputs:
       targetType: 'filePath'
