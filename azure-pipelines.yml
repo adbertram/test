@@ -42,4 +42,4 @@ steps:
   #     targetType: 'filePath'
   #     filePath: '$(System.DefaultWorkingDirectory)/script.ps1'
   #     arguments: "-foo 'foovalue' -bar 'barvalue'"
-  - powershell: 'exit 0'
+  - powershell: 'if ($LASTEXITCODE -eq 0) { exit 1 }'
