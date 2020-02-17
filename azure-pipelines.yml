@@ -27,6 +27,7 @@
 #       - pwsh: 'Write-Host "This is me running PowerShell code!"' ## PowerShell (Core) explicitly
 
 steps:
+  - checkout: none
   - task: PowerShell@2
     inputs:
       targetType: 'filePath'
