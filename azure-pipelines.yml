@@ -46,4 +46,3 @@ steps:
     inputs:
       targetType: 'filePath'
       filePath: '$(System.DefaultWorkingDirectory)/soft_error.ps1'
-      errorActionPreference: silentlyContinue
