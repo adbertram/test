@@ -42,8 +42,4 @@ steps:
   #     targetType: 'filePath'
   #     filePath: '$(System.DefaultWorkingDirectory)/script.ps1'
   #     arguments: "-foo 'foovalue' -bar 'barvalue'"
-  - task: PowerShell@2
-    inputs:
-      targetType: 'filePath'
-      filePath: '$(System.DefaultWorkingDirectory)/soft_error.ps1'
-      errorActionPreference: continue
+  - powershell: 'exit 0'
