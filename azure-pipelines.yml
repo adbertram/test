@@ -44,6 +44,7 @@ steps:
   #     arguments: "-foo 'foovalue' -bar 'barvalue'"
     - task: PowerShell@2
       inputs:
-        targetType: 'filePath'
-        filePath: '$(System.DefaultWorkingDirectory)/script.ps1'
-        ignoreLastExitCode: true
+        targetType: 'inline'
+        script: |
+          Write-Host  "##vso[task.LogIssue type=warning;]This is the warning"
+          Write-Host  "##vso[task.LogIssue type=error;]This is the error"
