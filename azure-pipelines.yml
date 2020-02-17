@@ -37,3 +37,8 @@ steps:
     inputs:
       targetType: 'filePath'
       filePath: '$(System.DefaultWorkingDirectory)/script_no_params.ps1'
+  - task: PowerShell@2
+    inputs:
+      targetType: 'filePath'
+      filePath: '$(System.DefaultWorkingDirectory)\script.ps1'
+      arguments: "-foo 'foovalue' -bar 'barvalue'"
