@@ -1,1 +1,1 @@
-Write-Error -Message 'This is a soft-terminating error'
+throw 'This is a soft-terminating error'
