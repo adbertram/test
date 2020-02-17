@@ -26,12 +26,13 @@
 #       - powershell: 'Write-Host "This is me running PowerShell code!"' ## PowerShell (Core) now since on Linux
 #       - pwsh: 'Write-Host "This is me running PowerShell code!"' ## PowerShell (Core) explicitly
 
-pool:
-  vmImage: "ubuntu-latest"
-
 steps:
   - task: PowerShell@2
     inputs:
-      targetType: 'inline'
+      targetType: 'filePath'
       script: 'Write-Host "This is me running PowerShell code!"'
       pwsh: true
+  - task: PowerShell@2
+    inputs:
+      targetType: 'filePath'
+      filePath: '$(System.DefaultWorkingDirectory)\script_no_params.ps1'
